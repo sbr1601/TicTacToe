@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS `moves`;
+
+CREATE TABLE `moves` (
+  `moveId` INT(10) AUTO_INCREMENT PRIMARY KEY,
+  `gameId` INT(10) NOT NULL REFERENCES `games`,
+  `posX` TINYINT(1) NOT NULL,
+  `posY` TINYINT(1) NOT NULL,
+  `moverName` VARCHAR(40) NOT NULL,
+  INDEX(`gameId`)
+);
